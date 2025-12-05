@@ -18,10 +18,8 @@ func main() {
 	fmt.Print("[")
 	var wg sync.WaitGroup
 	for i := 0; i < 30; i++ {
-		wg.Add(1)
-		go WaitGroupWrapper(&wg, PrintEmpty)
-		wg.Add(1)
-		go WaitGroupWrapper(&wg, PrintFilled)
+		RunWithWaitGroup(&wg, PrintEmpty)
+		RunWithWaitGroup(&wg, PrintFilled)
 	}
 	wg.Wait()
 	fmt.Print("]\n\n")
@@ -35,7 +33,10 @@ func PrintFilled() {
 	fmt.Print("▉")
 }
 
-func WaitGroupWrapper(wg *sync.WaitGroup, f func()) {
-	defer wg.Done()
-	f()
+func RunWithWaitGroup(wg *sync.WaitGroup, f func()) {
+	wg.Add(1)
+	go func() {
+		defer wg.Done()
+		f()
+	}()
 }

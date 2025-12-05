@@ -1,0 +1,48 @@
+   TIME   │                      [MAIN]                      │                     [PUSH-A]                     │                     [PUSH-B]                     
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+       0s │ Waiting for message...                           │                                                  │                                                  
+       0s │                                                  │                                                  │ Preparing "Pusher-B #0" for 18ms...              
+       0s │                                                  │ Preparing "Pusher-A #0" for 13ms...              │                                                  
+     14ms │                                                  │ Trying to send "Pusher-A #0"                     │                                                  
+     14ms │                                                  │ Sent "Pusher-A #0" (instant)                     │                                                  
+     14ms │                                                  │ Preparing "Pusher-A #1" for 26ms...              │                                                  
+     14ms │ Received: "Pusher-A #0"                          │                                                  │                                                  
+     14ms │ Processing for 186ms...                          │                                                  │                                                  
+     19ms │                                                  │                                                  │ Trying to send "Pusher-B #0"                     
+     41ms │                                                  │ Trying to send "Pusher-A #1"                     │                                                  
+    201ms │ Done processing                                  │                                                  │                                                  
+    201ms │ Waiting for message...                           │                                                  │                                                  
+    201ms │ Received: "Pusher-B #0"                          │                                                  │                                                  
+    201ms │ Processing for 160ms...                          │                                                  │                                                  
+    201ms │                                                  │                                                  │ Sent "Pusher-B #0" (blocked for 182ms)           
+    201ms │                                                  │                                                  │ Preparing "Pusher-B #1" for 26ms...              
+    228ms │                                                  │                                                  │ Trying to send "Pusher-B #1"                     
+    362ms │ Done processing                                  │                                                  │                                                  
+    362ms │ Waiting for message...                           │                                                  │                                                  
+    362ms │ Received: "Pusher-A #1"                          │                                                  │                                                  
+    362ms │ Processing for 187ms...                          │                                                  │                                                  
+    362ms │                                                  │ Sent "Pusher-A #1" (blocked for 320ms)           │                                                  
+    362ms │                                                  │ Preparing "Pusher-A #2" for 29ms...              │                                                  
+    392ms │                                                  │ Trying to send "Pusher-A #2"                     │                                                  
+    550ms │ Done processing                                  │                                                  │                                                  
+    550ms │ Waiting for message...                           │                                                  │                                                  
+    550ms │ Received: "Pusher-B #1"                          │                                                  │                                                  
+    550ms │ Processing for 174ms...                          │                                                  │                                                  
+    550ms │                                                  │                                                  │ Sent "Pusher-B #1" (blocked for 322ms)           
+    550ms │                                                  │                                                  │ Preparing "Pusher-B #2" for 27ms...              
+    578ms │                                                  │                                                  │ Trying to send "Pusher-B #2"                     
+    724ms │ Done processing                                  │                                                  │                                                  
+    724ms │ Waiting for message...                           │                                                  │                                                  
+    724ms │                                                  │ Sent "Pusher-A #2" (blocked for 332ms)           │                                                  
+    724ms │                                                  │ Preparing "Pusher-A #3" for 21ms...              │                                                  
+    724ms │ Received: "Pusher-A #2"                          │                                                  │                                                  
+    724ms │ Processing for 100ms...                          │                                                  │                                                  
+    746ms │                                                  │ Trying to send "Pusher-A #3"                     │                                                  
+    825ms │ Done processing                                  │                                                  │                                                  
+    825ms │ Waiting for message...                           │                                                  │                                                  
+    825ms │                                                  │                                                  │ Sent "Pusher-B #2" (blocked for 247ms)           
+    825ms │ Received: "Pusher-B #2"                          │                                                  │                                                  
+    825ms │ Processing for 157ms...                          │                                                  │                                                  
+    825ms │                                                  │                                                  │ Preparing "Pusher-B #3" for 26ms...              
+    852ms │                                                  │                                                  │ Trying to send "Pusher-B #3"                     
+    983ms │ Done processing                                  │                                                  │                                                  

@@ -7,13 +7,13 @@ import (
 )
 
 func main() {
-	file, err := os.Create("../assets/files.txt")
+	file, err := os.Create("./assets/files.txt")
 	checkError(err)
 	io.WriteString(file, "This is a test file")
 	checkError(err)
 	fmt.Printf("Wrote to file %v\n", file.Name())
 	defer file.Close()
-	defer readFile("../assets/files.txt")
+	defer readFile("./assets/files.txt")
 }
 
 func readFile(path string) {
